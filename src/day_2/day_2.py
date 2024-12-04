@@ -1,4 +1,3 @@
-import pandas as pd
 import os
 import re
 
@@ -6,13 +5,11 @@ dirname = os.path.dirname(__file__)
 input_data = os.path.join(dirname, 'input.txt')
 
 data = open(input_data)
-print(data)
 reports = []
 for report in data:
     cd = re.sub('\n', '', report)
     ra = cd.split(' ')
     reports.append(ra)
-print(reports)
 
 def get_current_direction(current_level, previous_level):
     if previous_level == None:
