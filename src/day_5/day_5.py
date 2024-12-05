@@ -49,7 +49,7 @@ def check_correct_order_of_updates(updates: list):
 
 total, incorrect_updates = check_correct_order_of_updates(updates)
 
-print(f'Number of incorrect updates: {len(incorrect)}')
+print(f'Number of incorrect updates: {len(incorrect_updates)}')
 print(f'Middle page total {total}')
 
 def swap_locations(l1, l2, update):
@@ -60,7 +60,6 @@ def swap_locations(l1, l2, update):
     update.insert(l1, page_2)
     del update[l1 + 1]
 
-corrected_middle_page_total = 0
 for update in incorrect_updates:
     page_location_updates = 1
     while page_location_updates > 0:
